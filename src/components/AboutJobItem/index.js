@@ -1,7 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {MdLocationOn} from 'react-icons/md'
-import {BsBriefcaseFill} from 'react-icons/bs'
 import {AiFillStar} from 'react-icons/ai'
 import {BiLinkExternal} from 'react-icons/bi'
 import Loader from 'react-loader-spinner'
@@ -73,6 +72,7 @@ class AboutJobItem extends Component {
           location: eachItem.location,
           rating: eachItem.rating,
           title: eachItem.title,
+          employmentType: eachItem.employment_type,
         }),
       )
       this.setState({
@@ -103,6 +103,7 @@ class AboutJobItem extends Component {
         title,
       } = jobDataDetails[0]
 
+      console.log(similarJobsData)
       return (
         <>
           <div className="job-item-container">
@@ -128,7 +129,6 @@ class AboutJobItem extends Component {
                     <p className="location">{location}</p>
                   </div>
                   <div className="employment-type-icon-employment-type-container">
-                    <BsBriefcaseFill className="location-type" />
                     <p className="job-type">{employmentType}</p>
                   </div>
                 </div>
@@ -171,11 +171,7 @@ class AboutJobItem extends Component {
           <h1 className="similar-jobs-heading">Similar Jobs</h1>
           <ul className="similar-jobs-ul-container">
             {similarJobsData.map(eachItem => (
-              <SimilarJobs
-                key={eachItem.id}
-                similarJobData={eachItem}
-                employmentType={jobDataDetails.employmentType}
-              />
+              <SimilarJobs key={eachItem.id} similarJobData={eachItem} />
             ))}
           </ul>
         </>

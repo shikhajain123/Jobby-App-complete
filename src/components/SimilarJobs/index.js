@@ -1,18 +1,17 @@
 import {MdLocationOn} from 'react-icons/md'
 import {AiFillStar} from 'react-icons/ai'
-import {BsBriefcaseFill} from 'react-icons/bs'
 import './index.css'
 
 const SimilarJobs = props => {
-  const {similarJobData, employmentType} = props
+  const {similarJobData} = props
   const {
     companyLogoUrl,
+    employmentType,
     jobDescription,
     location,
     rating,
     title,
   } = similarJobData
-  console.log(employmentType)
   return (
     <li className="similar-job-li-container">
       <div className="img-job-title-container">
@@ -39,7 +38,6 @@ const SimilarJobs = props => {
           <p className="location-job">{location}</p>
         </div>
         <div className="employment-job-type-icon-employment-type-container">
-          <BsBriefcaseFill className="location-job-icon" />
           <p className="job-type">{employmentType}</p>
         </div>
       </div>

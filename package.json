@@ -70,6 +70,8 @@
       "Firefox ESR",
       "not ie < 11"
     ],
-    "homepage":"https://sj.github.io/Jobby-App-complete"
+    "homepage":"https://sj.github.io/Jobby-App-complete",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }

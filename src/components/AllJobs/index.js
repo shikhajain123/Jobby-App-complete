@@ -201,7 +201,7 @@ class AllJobs extends Component {
   )
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="loader">
+    <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
   )
@@ -359,7 +359,7 @@ class AllJobs extends Component {
                 onKeyDown={this.onEnterSearchInput}
               />
               <button
-                testid="searchButton"
+                data-testid="searchButton"
                 type="button"
                 className="search-button"
                 onClick={this.onSubmitSearchInput}

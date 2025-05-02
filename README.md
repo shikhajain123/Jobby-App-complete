@@ -348,7 +348,7 @@ Returns a response containing the job details
 - Wrap the `Loader` component with an HTML container element and add the `testid` attribute value as **loader** to it
 
   ```jsx
-  <div className="loader-container" testid="loader">
+  <div className="loader-container" data-testid="loader">
     <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
   </div>
   ```
@@ -356,7 +356,7 @@ Returns a response containing the job details
 - The HTML button element with search icon in Jobs Route should have the `testid` attribute value as **searchButton** to it
 
   ```jsx
-  <button type="button" testid="searchButton">
+  <button type="button" data-testid="searchButton">
     <BsSearch className="search-icon" />
   </button>
   ```
